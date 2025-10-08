@@ -15,17 +15,20 @@ function AddTodo() {
   };
 
   return (
-    <form className="space-x-3 mt-12 px-4 flex justify-center items-center" onSubmit={addTodoHandler}>
+    <form
+      onSubmit={addTodoHandler}
+      className="mt-12 px-4 flex justify-center items-center gap-3"
+    >
       <input
         type="text"
-        className="bg-yellow-100 text-stone-800 placeholder-stone-500 border border-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-600 py-2 px-4 rounded w-64"
         placeholder="Enter a Todo..."
         value={input}
         onChange={(e) => setInput(e.target.value)}
+        className="bg-[#0b1b33] border border-blue-600 focus:ring-2 focus:ring-blue-400 text-white placeholder-gray-400 py-2 px-4 rounded w-64 shadow-inner shadow-blue-950/60"
       />
       <button
         type="submit"
-        className="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-2 rounded"
+        className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-semibold px-6 py-2 rounded-lg shadow shadow-blue-900/50 transition-transform duration-150 active:scale-95"
       >
         Add
       </button>
